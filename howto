@@ -1,0 +1,36 @@
+Howto run the project
+
+https://github.com/bertrandmartel/javacard-tutorial
+
+against the jcardsim.
+
+The project uses a gradle plugin. Gradle is one of the java build systems, there is Gradle, Maven and Ant and all are horrible.
+
+First I get the project git clone --recursive https://github.com/bertrandmartel/javacard-tutorial.git
+
+I use for Java development the Intellij Idea IDE, it's the best by far. I use the professional, but it should be the same with the community edition. You get it here:
+
+https://www.jetbrains.com/idea/download/
+
+Open it, and click "Open" on the welcome screen.
+
+Navigate to the project and select the top build.gradle file and click Ok, and in the dialog "Open as Project". Then you get a popup in the right bottom corner where it asks for Gradle changes, click "Enable auto-import". Now it downloads all dependencies and structures the Project view on the right as a gradle project.
+
+When finished with downloading you see in the Project view on the left the javacard-tutorial with the top build.gradle and the 4 subprojects.
+
+On the right margin you have vertically a "Gradle tab", open that, open the menu point
+
+javacard-tutorial -> jc101-1c -> Tasks
+
+Here you have all gradle tasks that are configured. E.g. go to
+
+Tasks -> build -> verification and right click "test" and in the popup the first "run...", then it runs the build and tests against the simulator.
+
+If you want to install on card I assume (because I couldn't test it yet) you would use the "global platform" gradle tasks.
+
+All those tasks are configured in gradle itself (java tools are always opinionated what makes them hard for beginners to use) or in the top build.gradle or in the project specific build.gradle.
+
+Let me know if it worked.
+
+
+ 

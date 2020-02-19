@@ -8,7 +8,7 @@ dependencies {
 javacard {
 
     config {
-        jckit '../oracle_javacard_sdks/jc221_kit'
+        jckit '../oracle_javacard_sdks/jc304_kit'
 
         cap {
             packageName 'fr.bmartel.helloworld'
