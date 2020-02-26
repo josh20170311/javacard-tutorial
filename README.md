@@ -3,6 +3,15 @@
 [![Build Status](https://travis-ci.org/bertrandmartel/javacard-tutorial.svg?branch=master)](https://travis-ci.org/bertrandmartel/javacard-tutorial)
 [![Coverage Status](https://coveralls.io/repos/github/bertrandmartel/javacard-tutorial/badge.svg?branch=master)](https://coveralls.io/github/bertrandmartel/javacard-tutorial?branch=master)
 
+### Branch "experimental"
+This is my fork of the Tutorial. It adds a jc101-hello-world subproject that has two instructions:
+* INS_HELLO: send a string and receive "Hello \<string>!"
+* INS_SHA256: send a string and receive the sha256(\<string>)
+
+That's it.
+
+### Original README
+
 Examples from Eric Vétillard's [tutorial](http://javacard.vetilles.com/tutorial/) re-arranged in a Gradle project using [JavaCard gradle plugin](https://github.com/bertrandmartel/javacard-gradle-plugin) with additional tests
 
 Each example is referenced as a Gradle module with :
