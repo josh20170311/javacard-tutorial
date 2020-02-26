@@ -5,7 +5,6 @@ import javacard.security.MessageDigest;
 
 public class HelloWorld extends Applet {
 
-//    private static final byte[] hello = {0x48, 0x65, 0x6c, 0x6c, 0x6f};
     private static final byte[] hello = {'H', 'e', 'l', 'l', 'o'};
     private static final byte[] space = {' '};
     private static final byte[] exclamationMark = {'!'};

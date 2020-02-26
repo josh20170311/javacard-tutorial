@@ -12,7 +12,6 @@ import javax.smartcardio.CardException;
 import javax.smartcardio.CommandAPDU;
 import javax.smartcardio.ResponseAPDU;
 
-import static java.lang.System.arraycopy;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
@@ -55,12 +54,6 @@ public class HelloWorldTest extends JavaCardTest {
 
     @Test
     public void helloWorldTest() throws CardException {
-        // construction of result string "Hello World!" for assertions below
-//        byte[] helloWorld = new byte[12];
-//        arraycopy(hello, 0, helloWorld, 0, hello.length);
-//        arraycopy(new byte[] {(byte) 0x20}, 0, helloWorld, hello.length, 1);
-//        arraycopy(world, 0, helloWorld, hello.length + 1, world.length);
-//        arraycopy(new byte[] {(byte) 0x21}, 0, helloWorld, hello.length + 1 + world.length, 1);
         byte[] helloWorld = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!'};
 
         // send "World" ...
@@ -75,11 +68,6 @@ public class HelloWorldTest extends JavaCardTest {
     @Test
     public void helloSpecterTest() throws CardException {
         // same with "Hello Specter!"
-//        byte[] helloSpecter = new byte[14];
-//        arraycopy(hello, 0, helloSpecter, 0, hello.length);
-//        arraycopy(new byte[] {(byte) 0x20}, 0, helloSpecter, hello.length, 1);
-//        arraycopy(specter, 0, helloSpecter, hello.length + 1, specter.length);
-//        arraycopy(new byte[] {(byte) 0x21}, 0, helloSpecter, hello.length + 1 + specter.length, 1);
         byte[] helloSpecter = {'H', 'e', 'l', 'l', 'o', ' ', 'S', 'p', 'e', 'c', 't', 'e', 'r', '!'};
 
         CommandAPDU c = new CommandAPDU(0x00, 0x40, 0x00, 0x00, specter, 14);
@@ -92,12 +80,6 @@ public class HelloWorldTest extends JavaCardTest {
     @Test
     public void helloSpecterSHA256() throws CardException {
         // javacard.security.MessageDigest.ALG_SHA_256
-//        byte[] helloSpecter = new byte[14];
-//        arraycopy(hello, 0, helloSpecter, 0, hello.length);
-//        arraycopy(new byte[] {(byte) 0x20}, 0, helloSpecter, hello.length, 1);
-//        arraycopy(specter, 0, helloSpecter, hello.length + 1, specter.length);
-//        arraycopy(new byte[] {(byte) 0x21}, 0, helloSpecter, hello.length + 1 + specter.length, 1);
-
         byte[] helloSpecter = {'H', 'e', 'l', 'l', 'o', ' ', 'S', 'p', 'e', 'c', 't', 'e', 'r', '!'};
 
         CommandAPDU c = new CommandAPDU(0x00, 0x42, 0x00, 0x00, helloSpecter, 32);
