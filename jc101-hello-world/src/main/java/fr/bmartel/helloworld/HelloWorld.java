@@ -9,7 +9,7 @@ public class HelloWorld extends Applet {
     private static final byte[] space = {' '};
     private static final byte[] exclamationMark = {'!'};
 
-    private static final byte INS_HELLO  = 0x40;
+    private static final byte INS_HELLO  = 0x32;
     private static final byte INS_SHA256 = 0x42;
 
     private static byte[] selected;
@@ -31,7 +31,7 @@ public class HelloWorld extends Applet {
                 break;
              // hello + received bytes
             case INS_HELLO:
-                byte[] response = new byte[hello.length + len + 2]; // 'hello' + ' ' + incoming payload + '!'
+                byte[] response = new byte[ (short) (hello.length + len + 2)]; // 'hello' + ' ' + incoming payload + '!'
                 // TODO check lengths for buffer overflows!
                 // TODO write some convenience methods
                 Util.arrayCopy(hello, (byte) 0, response, (byte) 0, (byte) hello.length);

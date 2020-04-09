@@ -17,7 +17,7 @@ javacard {
             output 'applet.cap'
             applet {
                 className 'fr.bmartel.helloworld.HelloWorld'
-                aid '01:02:03:04:05:06:07:08:09:01'
+                aid '01:02:03:04:05:06:07:08:09:01:01'
             }
         }
     }
@@ -25,15 +25,35 @@ javacard {
     scripts {
         script {
             name 'select'
-            apdu '00:A4:04:00:0A:01:02:03:04:05:06:07:08:09:01'
+            apdu '00:A4:04:00:0A:01:02:03:04:05:06:07:08:09:01:01'
         }
         script {
             name 'helloWorld'
-            apdu '00:40:00:00:0c:57:6f:72:6c:64'
+            apdu '00:32:00:00:05:57:6f:72:6c:64:0C'
         }
         script {
             name 'helloSpecter'
-            apdu '00:40:00:00:0e:53:70:65:63:74:65:72'
+            apdu '00:32:00:00:07:53:70:65:63:74:65:72'
+        }
+        script {
+            name 'helloSHA256'
+            apdu '00:42:00:00:0e:48:65:6c:6c:6f:20:53:70:65:63:74:65:72:21:32'
+        }
+        task {
+            name 'select'
+            scripts 'select'
+        }
+        task {
+            name 'helloWorld'
+            scripts 'select', 'helloWorld'
+        }
+        task {
+            name 'helloSpecter'
+            scripts 'select', 'helloSpecter'
+        }
+        task {
+            name 'helloSHA256'
+            scripts 'select', 'helloSHA256'
         }
         task {
             name 'sendHello'

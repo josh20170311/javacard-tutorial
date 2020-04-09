@@ -57,7 +57,7 @@ public class HelloWorldTest extends JavaCardTest {
         byte[] helloWorld = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!'};
 
         // send "World" ...
-        CommandAPDU c = new CommandAPDU(0x00, 0x40, 0x00, 0x00, world, 12);
+        CommandAPDU c = new CommandAPDU(0x00, 0x32, 0x00, 0x00, world, 12);
         ResponseAPDU response = transmitCommand(c);
         assertEquals(0x9000, response.getSW());
         // get result "Hello World!"
@@ -70,7 +70,7 @@ public class HelloWorldTest extends JavaCardTest {
         // same with "Hello Specter!"
         byte[] helloSpecter = {'H', 'e', 'l', 'l', 'o', ' ', 'S', 'p', 'e', 'c', 't', 'e', 'r', '!'};
 
-        CommandAPDU c = new CommandAPDU(0x00, 0x40, 0x00, 0x00, specter, 14);
+        CommandAPDU c = new CommandAPDU(0x00, 0x32, 0x00, 0x00, specter, 14);
         ResponseAPDU response = transmitCommand(c);
         assertEquals(0x9000, response.getSW());
         assertArrayEquals(helloSpecter, response.getData());
