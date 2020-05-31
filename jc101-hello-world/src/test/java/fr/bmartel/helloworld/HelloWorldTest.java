@@ -38,7 +38,7 @@ public class HelloWorldTest extends JavaCardTest {
     };
 
 
-@BeforeClass
+    @BeforeClass
     public static void setup() throws CardException {
         TestSuite.setup();
     }

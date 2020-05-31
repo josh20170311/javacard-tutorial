@@ -2,10 +2,14 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="javacard-tutorial-jc101-1c" target="1.8" />
       <module name="javacard-tutorial-jc101-1c_main" target="1.8" />
       <module name="javacard-tutorial-jc101-1c_test" target="1.8" />
+      <module name="javacard-tutorial-jc101-2c" target="1.8" />
       <module name="javacard-tutorial-jc101-2c_main" target="1.8" />
       <module name="javacard-tutorial-jc101-2c_test" target="1.8" />
+      <module name="javacard-tutorial-jc101-password" target="1.8" />
+      <module name="javacard-tutorial-jc101-password-pin" target="1.8" />
       <module name="javacard-tutorial-jc101-password-pin_main" target="1.8" />
       <module name="javacard-tutorial-jc101-password-pin_test" target="1.8" />
       <module name="javacard-tutorial-jc101-password_main" target="1.8" />
@@ -14,6 +18,7 @@
       <module name="jc101-1c_test" target="1.8" />
       <module name="jc101-2c_main" target="1.8" />
       <module name="jc101-2c_test" target="1.8" />
+      <module name="jc101-hello-world" target="1.8" />
       <module name="jc101-hello-world_main" target="1.8" />
       <module name="jc101-hello-world_test" target="1.8" />
       <module name="jc101-password-pin_main" target="1.8" />
