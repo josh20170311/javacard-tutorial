@@ -31,6 +31,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/jc101-password-pin/jc101-password-pin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/jc101-password-pin/jc101-password-pin_test.iml" group="jc101-password-pin" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/jc101-password/jc101-password_main.iml" filepath="$PROJECT_DIR$/.idea/modules/jc101-password/jc101-password_main.iml" group="jc101-password" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/jc101-password/jc101-password_test.iml" filepath="$PROJECT_DIR$/.idea/modules/jc101-password/jc101-password_test.iml" group="jc101-password" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jc101-teapot/jc101-teapot.iml" filepath="$PROJECT_DIR$/.idea/modules/jc101-teapot/jc101-teapot.iml" group="javacard-tutorial/jc101-teapot" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jc101-teapot/jc101-teapot_main.iml" filepath="$PROJECT_DIR$/.idea/modules/jc101-teapot/jc101-teapot_main.iml" group="javacard-tutorial/jc101-teapot" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jc101-teapot/jc101-teapot_test.iml" filepath="$PROJECT_DIR$/.idea/modules/jc101-teapot/jc101-teapot_test.iml" group="javacard-tutorial/jc101-teapot" />
     </modules>
   </component>
 </project>

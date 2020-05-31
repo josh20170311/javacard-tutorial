@@ -1,2 +1,7 @@
-include ':jc101-hello-world',':jc101-1c',':jc101-2c',':jc101-password',':jc101-password-pin'
+include ':jc101-hello-world',
+        ':jc101-1c',
+        ':jc101-2c',
+        ':jc101-password',
+        ':jc101-password-pin',
+        ':jc101-teapot'
 
