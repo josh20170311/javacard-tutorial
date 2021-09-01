@@ -21,7 +21,11 @@ javacard {
             }
 
             dependencies {
-                remote 'fr.bmartel:gplatform:2.1.1'
+//                remote 'fr.bmartel:gplatform:2.1.1'
+                local{
+                    jar '../libs/gp221/gp221.jar'
+                    exps '../libs/gp221/'
+                }
             }
         }
     }

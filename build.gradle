@@ -1,9 +1,11 @@
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
+        maven{url 'https://javacard.pro/maven'}
+        maven{url 'https://deadcode.me/mvn'}
     }
     dependencies {
-        classpath 'fr.bmartel:gradle-javacard:1.5.6'
+        classpath 'com.klinec:gradle-javacard:1.8.0'
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.1'
     }
 }
@@ -14,7 +16,9 @@ allprojects {
     apply plugin: 'com.github.kt3k.coveralls'
 
     repositories {
-        jcenter()
+        mavenCentral()
+        maven{url 'https://javacard.pro/maven'}
+        maven{url 'https://deadcode.me/mvn'}
     }
 
     jacoco {
@@ -51,9 +55,9 @@ task jacocoRootReport(type: JacocoReport, group: 'Coverage reports') {
     description = 'Generates an aggregate report from all subprojects'
     dependsOn publishedProjects.test, jacocoMerge
 
-    additionalSourceDirs = files(publishedProjects.sourceSets.main.allSource.srcDirs)
-    sourceDirectories = files(publishedProjects.sourceSets.main.allSource.srcDirs)
-    classDirectories = files(publishedProjects.sourceSets.main.output)
+//    additionalSourceDirs = files(publishedProjects.sourceSets.main.allSource.srcDirs)
+//    sourceDirectories = files(publishedProjects.sourceSets.main.allSource.srcDirs)
+//    classDirectories = files(publishedProjects.sourceSets.main.output)
     executionData jacocoMerge.destinationFile
 
     reports {
