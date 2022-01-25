@@ -10,3 +10,4 @@ app/src/main/libs
 app/build
 **/build/
 **/out/
+.idea
